@@ -17,6 +17,7 @@ const App = () => {
             <h1>Тест веток GITHUB, мой первый коммит</h1>
             <input type="text" placeholder='Ваше имя' onChange={ (event) => setName({message: event.target.value}) }/>
             <input type="button" value='Отправить' onClick={sendMessage}/>
+             ggvfghggh
         </div>
     );
 };
