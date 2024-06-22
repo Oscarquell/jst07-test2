@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import axios from "axios";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+
+    const [name, setName] = useState({
+        message: ''
+    })
+
+    async function sendMessage () {
+        const response = await axios.post('https://codify-graduation-project.vercel.app/send-message', name)
+        console.log(response.data)
+    }
+    
+    return (
+        <div>
+            <h1>Тест веток GITHUB</h1>
+            <input type="text" placeholder='Ваше имя' onChange={ (event) => setName({message: event.target.value}) }/>
+            <input type="button" value='Отправить' onClick={sendMessage}/>
+        </div>
+    );
+};
 
 export default App;
