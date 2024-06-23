@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import axios from "axios";
+import Header from "./components/header/header";
 
 const App = () => {
 
@@ -14,10 +15,11 @@ const App = () => {
     
     return (
         <div>
+            <Header />
             <h1>Тест веток GITHUB, мой первый коммит</h1>
             <input type="text" placeholder='Ваше имя' onChange={ (event) => setName({message: event.target.value}) }/>
             <input type="button" value='Отправить' onClick={sendMessage}/>
-             ggvfghggh
+
         </div>
     );
 };
