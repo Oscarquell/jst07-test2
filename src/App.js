@@ -17,7 +17,8 @@ const App = () => {
     return (
         <div>
             <Header />
-            <h1>Тест веток GITHUB, мой первый коммит</h1>
+            <h1>Тест для верселя</h1>
+            <h2>Тест веток GITHUB, мой первый коммит</h2>
             <input type="text" placeholder='Ваше имя' onChange={ (event) => setName({message: event.target.value}) }/>
             <input type="button" value='Отправить' onClick={sendMessage}/>
             <Footer />
