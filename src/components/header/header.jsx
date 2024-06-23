@@ -3,9 +3,9 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <header>
-            HEADER Artem
-        </header>
+        <div>
+            HEADER ASKAR
+        </div>
     );
 };
 
